@@ -1,17 +1,19 @@
+import entry.Entry;
+
+import java.time.ZonedDateTime;
+import java.util.Set;
+
 // 누군가의 자산
 public class Asset {
     // 자산 총량
     private long amount;
 
-    public long calculateInterestForDate() {
-        long result = InterestCalculator.calculateInterestForDate();
-        this.amount += result;
-        return  result;
+    public Set<Entry> accrualsFor(ZonedDateTime date) {
+        // stub
+        return null;
     }
 
-    public long calculateFeeForDate() {
-        long result = FeeCalculator.calculateFeeForDate();
-        this.amount -= result;
-        return  result;
+    public void insertAccrualsFor(ZonedDateTime date) {
+        // stub
     }
 }
